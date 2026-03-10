@@ -22,7 +22,7 @@
       --teal: #14b8a6;
       --mint: #6ee7b7;
       --lime: #34d399;
-      --shadow: 0 18px 60px rgba(0,0,0,.28);
+      --shadow: 0 10px 30px rgba(0,0,0,.22);
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 18px;
@@ -34,9 +34,8 @@
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(16,185,129,.20), transparent 28%),
-        radial-gradient(circle at top right, rgba(20,184,166,.14), transparent 24%),
-        radial-gradient(circle at 20% 80%, rgba(110,231,183,.12), transparent 24%),
+        radial-gradient(circle at top left, rgba(16,185,129,.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(20,184,166,.12), transparent 24%),
         linear-gradient(180deg, #04110f 0%, #061513 40%, #071816 100%);
       color: var(--text);
       min-height: 100vh;
@@ -48,20 +47,12 @@
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
       background-size: 72px 72px;
       pointer-events: none;
-      opacity: .18;
+      opacity: .14;
       mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 82%);
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,.18) 100%);
     }
 
     .container {
@@ -72,18 +63,18 @@
     .glass {
       background: var(--panel);
       border: 1px solid var(--line);
-      backdrop-filter: blur(18px);
+      backdrop-filter: blur(8px);
       box-shadow: var(--shadow);
     }
 
     .hover-glow {
-      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
     }
 
     .hover-glow:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 22px 50px rgba(16,185,129,.14), 0 10px 28px rgba(0,0,0,.24);
-      border-color: rgba(110,231,183,.22);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(16,185,129,.10), 0 8px 20px rgba(0,0,0,.20);
+      border-color: rgba(110,231,183,.18);
       background: var(--panel-strong);
     }
 
@@ -91,8 +82,8 @@
       position: sticky;
       top: 0;
       z-index: 60;
-      backdrop-filter: blur(18px);
-      background: rgba(4,17,15,.68);
+      backdrop-filter: blur(10px);
+      background: rgba(4,17,15,.72);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
@@ -116,7 +107,7 @@
       height: 10px;
       border-radius: 999px;
       background: var(--green);
-      box-shadow: 0 0 24px rgba(16,185,129,.85);
+      box-shadow: 0 0 16px rgba(16,185,129,.7);
     }
 
     .nav-links {
@@ -141,7 +132,6 @@
       color: white;
       background: rgba(255,255,255,.08);
       border: 1px solid rgba(255,255,255,.08);
-      box-shadow: 0 0 30px rgba(16,185,129,.10);
     }
 
     .nav-links a:hover {
@@ -168,9 +158,9 @@
     .profile-wrap::before {
       content: "";
       position: absolute;
-      inset: -12px;
-      background: linear-gradient(135deg, rgba(16,185,129,.18), rgba(20,184,166,.1), rgba(110,231,183,.14));
-      filter: blur(28px);
+      inset: -10px;
+      background: linear-gradient(135deg, rgba(16,185,129,.16), rgba(20,184,166,.08), rgba(110,231,183,.10));
+      filter: blur(22px);
       border-radius: 34px;
       z-index: -1;
     }
@@ -185,14 +175,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-
-    .profile-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,.04), transparent 55%, rgba(16,185,129,.03));
-      pointer-events: none;
     }
 
     .profile-top {
@@ -214,7 +196,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center 70%;
-      transform: scale(1.35);
+      transform: scale(1.2);
       border-radius: 20px;
       display: block;
     }
@@ -261,9 +243,8 @@
     .mini-card {
       border-radius: var(--radius-lg);
       padding: 18px;
-      background: rgba(0,0,0,.18);
+      background: rgba(0,0,0,.16);
       border: 1px solid rgba(255,255,255,.08);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
     }
 
     .mini-card p:first-child {
@@ -314,7 +295,6 @@
       height: 10px;
       border-radius: 999px;
       background: var(--green);
-      box-shadow: 0 0 18px rgba(16,185,129,.8);
     }
 
     .hero-title {
@@ -375,7 +355,7 @@
     .cert-link {
       color: #02110d;
       background: linear-gradient(90deg, var(--green), var(--teal));
-      box-shadow: 0 16px 34px rgba(16,185,129,.24);
+      box-shadow: 0 10px 24px rgba(16,185,129,.18);
     }
 
     .btn-secondary,
@@ -441,15 +421,6 @@
       border-radius: 32px;
       position: relative;
       overflow: hidden;
-    }
-
-    .about-card::before,
-    .skill-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,.03), transparent 58%);
-      pointer-events: none;
     }
 
     .about-text {
@@ -520,8 +491,8 @@
       margin-top: 6px;
       padding: 16px 18px;
       border-radius: 20px;
-      background: linear-gradient(135deg, rgba(16,185,129,.10), rgba(20,184,166,.05));
-      border: 1px solid rgba(110,231,183,.12);
+      background: linear-gradient(135deg, rgba(16,185,129,.08), rgba(20,184,166,.04));
+      border: 1px solid rgba(110,231,183,.10);
       color: #d8e5e2;
       line-height: 1.75;
       font-size: 14px;
@@ -565,19 +536,54 @@
       display: block;
     }
 
-    .project-cover iframe {
-      width: 100%;
-      height: 220px;
-      border: none;
-      display: block;
-      border-radius: 0;
-    }
-
     .project-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(4,17,15,.25), transparent);
+      background: linear-gradient(to top, rgba(4,17,15,.22), transparent);
       pointer-events: none;
+    }
+
+    .pdf-cover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(135deg, rgba(16,185,129,.16), rgba(20,184,166,.08)),
+        linear-gradient(180deg, #0b1917, #10211d);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .pdf-cover-content {
+      position: relative;
+      z-index: 2;
+      max-width: 260px;
+    }
+
+    .pdf-badge {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #ecfdf5;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+      margin-bottom: 12px;
+    }
+
+    .pdf-cover-content h4 {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+
+    .pdf-cover-content p {
+      margin: 0;
+      color: #cbd8d8;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .project-content,
@@ -685,7 +691,7 @@
       height: 16px;
       border-radius: 999px;
       background: var(--green);
-      box-shadow: 0 0 22px rgba(16,185,129,.8);
+      box-shadow: 0 0 16px rgba(16,185,129,.65);
     }
 
     .timeline-top {
@@ -836,8 +842,8 @@
 
     .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: .7s ease;
+      transform: translateY(20px);
+      transition: .6s ease;
     }
 
     .reveal.show {
@@ -926,7 +932,7 @@
           <div class="profile-card glass hover-glow">
             <div class="profile-top">
               <div class="avatar">
-                <img src="Andhika.jpg" alt="Foto profil Andhika Pradana Rahma Dhany" />
+                <img src="Andhika.jpg" alt="Foto profil Andhika Pradana Rahma Dhany" loading="eager" />
               </div>
               <div>
                 <h2 class="profile-name">Andhika Pradana Rahma Dhany</h2>
@@ -1081,7 +1087,7 @@
         <div class="project-grid">
           <article class="project-card glass hover-glow">
             <div class="project-cover">
-              <img src="Ansur-GBSG2_cover.png" alt="Survival Analysis Project Cover">
+              <img src="Ansur-GBSG2_cover.png" alt="Survival Analysis Project Cover" loading="lazy">
               <div class="project-overlay"></div>
             </div>
 
@@ -1108,7 +1114,7 @@
 
           <article class="project-card glass hover-glow">
             <div class="project-cover">
-              <img src="Komstat-Youtube_cover.png" alt="YouTube Scraping Project Cover">
+              <img src="Komstat-Youtube_cover.png" alt="YouTube Scraping Project Cover" loading="lazy">
               <div class="project-overlay"></div>
             </div>
 
@@ -1136,7 +1142,7 @@
 
           <article class="project-card glass hover-glow">
             <div class="project-cover">
-              <img src="Visdat-Infografis.jpeg" alt="Sanitation and Stunting Project Cover">
+              <img src="Visdat-Infografis.jpeg" alt="Sanitation and Stunting Project Cover" loading="lazy">
               <div class="project-overlay"></div>
             </div>
 
@@ -1165,7 +1171,7 @@
 
           <article class="project-card glass hover-glow">
             <div class="project-cover">
-              <img src="PSD-Topic_Modeling_cover.png" alt="Topic Modeling Project Cover">
+              <img src="PSD-Topic_Modeling_cover.png" alt="Topic Modeling Project Cover" loading="lazy">
               <div class="project-overlay"></div>
             </div>
 
@@ -1192,7 +1198,7 @@
 
           <article class="project-card glass hover-glow">
             <div class="project-cover">
-              <img src="SIC-ketahanan pangan.jpeg" alt="Food Security Infographic" />
+              <img src="SIC-ketahanan pangan.jpeg" alt="Food Security Infographic" loading="lazy">
               <div class="project-overlay"></div>
             </div>
 
@@ -1218,8 +1224,13 @@
           </article>
 
           <article class="project-card glass hover-glow">
-            <div class="project-cover">
-              <iframe src="Samsur-Kuesioner.pdf#page=1"></iframe>
+            <div class="project-cover pdf-cover">
+              <div class="pdf-cover-content">
+                <span class="pdf-badge">PDF Research</span>
+                <h4>FOMO Survey Analysis</h4>
+                <p>Validity, reliability, and student survey research</p>
+              </div>
+              <div class="project-overlay"></div>
             </div>
 
             <div class="project-content">
